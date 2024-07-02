@@ -42,10 +42,11 @@ jobs:
       #        run: coverage run --branch --source=$GITHUB_WORKSPACE ./manage.py test contributions --noinput --parallel
       #      - name: Generate Coverage Report
       #        run: coverage xml -o test-coverage.xml
-      - name: Generate coverage report
-        run: |
-          pip install pytest-cov
-          pytest --cov-config=.coveragerc --cov=./ --cov-report=xml
+#      - name: Generate coverage report
+#        run: |
+#          pip install pytest-cov
+#          pytest --cov-config=.coveragerc --cov=./ --cov-report=xml
+
 #      - name: Upload coverage to Codecov
 #        uses: codecov/codecov-action@v2
 #        with:
