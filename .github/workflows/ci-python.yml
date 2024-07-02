@@ -35,7 +35,7 @@ jobs:
           pip install -r app/requirements.txt
       - name: Run Tests
         run: |
-          python manage.py test --verbosity 2 --settings event-driven-architecture.settings.test
+          python app/handler.py test --verbosity 2 --settings event-driven-architecture.settings.test
       #      - name: Install coverage dependecy
       #        run: pip install coverage
       #      - name: Run Test With Coverage
