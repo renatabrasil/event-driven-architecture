@@ -48,8 +48,11 @@ on:
   push:
     branches:
       - main
+#      - 'feature/**'
   pull_request:
     types: [ opened, synchronize, reopened ]
+    branches:
+      - 'feature/**'
 
 jobs:
   terraform:
