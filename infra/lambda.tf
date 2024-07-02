@@ -26,7 +26,7 @@ resource "aws_cloudwatch_log_group" "function_log_group" {
 ### Log group policy
 
 resource "aws_iam_policy" "function_logging_policy" {
-  name   = "function-logging-policy"
+  name = "function-logging-policy"
   policy = jsonencode({
     "Version" : "2012-10-17",
     "Statement" : [
@@ -56,7 +56,7 @@ data "aws_iam_policy_document" "assume_role" {
 }
 
 resource "aws_iam_role_policy_attachment" "function_logging_policy_attachment" {
-  role = aws_iam_role.iam_for_lambda.id
+  role       = aws_iam_role.iam_for_lambda.id
   policy_arn = aws_iam_policy.function_logging_policy.arn
 }
 
