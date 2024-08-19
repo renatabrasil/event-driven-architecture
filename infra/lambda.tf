@@ -39,7 +39,6 @@ resource "aws_iam_policy" "function_logging_policy" {
         Resource : "arn:aws:logs:*:*:*"
       },
       {
-        "Sid" : "Statement1",
         "Effect" : "Allow",
         "Action" : [
           "logs:GetLogEvents"
@@ -49,7 +48,6 @@ resource "aws_iam_policy" "function_logging_policy" {
         ]
       },
       {
-        "Sid" : "Statement1",
         "Effect" : "Allow",
         "Action" : [
           "lambda:InvokeFunction"
