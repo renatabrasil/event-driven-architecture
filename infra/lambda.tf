@@ -37,6 +37,24 @@ resource "aws_iam_policy" "function_logging_policy" {
         ],
         Effect : "Allow",
         Resource : "arn:aws:logs:*:*:*"
+      },
+      {
+        "Sid": "Statement1",
+        "Effect": "Allow",
+        "Action": [
+          "logs:GetLogEvents"
+        ],
+        "Resource": [
+          "arn:aws:logs:sa-east-1:251675404411:log-group:/aws/lambda/hello-world-lambda-dev-hello:log-stream:*"
+        ]
+      },
+      {
+        "Sid": "Statement1",
+        "Effect": "Allow",
+        "Action": [
+          "lambda:InvokeFunction"
+        ],
+        "Resource": "arn:aws:lambda:sa-east-1:251675404411:function:lambda_handler"
       }
     ]
   })
